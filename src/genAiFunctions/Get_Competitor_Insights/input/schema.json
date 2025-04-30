@@ -1,0 +1,14 @@
+{
+  "required" : [ "quoteId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "quoteId" : {
+      "title" : "Quote ID",
+      "description" : "ID of the Quote to retrieve competitor insights for",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,31 @@
+{
+  "required" : [ "Input:Competitor_Pricing", "Input:Quote" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Competitor_Pricing" : {
+      "title" : "Competitor_Pricing",
+      "description" : "Pass the output from Get Competitor Insights apex action in a JSON format",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Quote" : {
+      "title" : "Quote",
+      "description" : "Pass the Quote Records",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Quote"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

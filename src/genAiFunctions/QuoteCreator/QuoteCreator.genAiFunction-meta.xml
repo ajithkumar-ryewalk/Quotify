@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Invoke this action after a response is received from the prompt action. The action creates a quote under the opportunity and adds the relevant product</description>
+    <invocationTarget>QuoteCreator</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>QuoteCreator</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_8</activeVersionIdentifier>
+    <developerName>Get_Pricing_Insights</developerName>
+    <masterLabel>Get Pricing Insights</masterLabel>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+The currency is in INR
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+The currency is in USD
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and definitely suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_6</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and suggest a discount to be offered 
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_5</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and definitely SUGGEST a discount to be offered to make the deal a success
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_7</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a sales agent in a SaaS company. 
+Your job is to analyze the competitor pricing records provided in JSON format : {!$Input:Competitor_Pricing} 
+After thoroughly analyzing, provide a summary on what are the prices offered for the same product by various other companies 
+Compare the prices available in {!$RelatedList:Quote.QuoteLineItems.Records} with {!$Input:Competitor_Pricing} and definitely SUGGEST a discount value to be offered to make the deal a success
+Be very precise and clear 
+Based on the product(s) already included in the quote, suggest other complementary products from the following list: {!$Flow:List_of_Products_for_Prompts.Prompt}
+Only suggest relevant add-ons or bundles that enhance the value of the original product.
+Make the suggestion short and crisp
+Do not suggest any products outside of this list.
+DO NOT hallucinate 
+DO NOT repeat any information
+</content>
+        <inputs>
+            <apiName>Competitor_Pricing</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Competitor_Pricing</masterLabel>
+            <referenceName>Input:Competitor_Pricing</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Quote</apiName>
+            <definition>SOBJECT://Quote</definition>
+            <masterLabel>Quote</masterLabel>
+            <referenceName>Input:Quote</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Quote.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>QuoteLineItems</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Quote.QuoteLineItems.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_8</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

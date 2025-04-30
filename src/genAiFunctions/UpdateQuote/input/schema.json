@@ -1,0 +1,28 @@
+{
+  "required" : [ "opportunityId", "productsJson", "quoteId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "opportunityId" : {
+      "title" : "Opportunity ID",
+      "description" : "ID of the Opportunity under which the quote will be present",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "productsJson" : {
+      "title" : "Products JSON",
+      "description" : "JSON string containing Product Name and other details",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "quoteId" : {
+      "title" : "Quote ID",
+      "description" : "ID of the selected Quote to add more products",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

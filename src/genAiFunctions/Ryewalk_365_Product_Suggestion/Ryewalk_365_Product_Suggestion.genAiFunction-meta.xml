@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Prompt template to select a product that meets the requirement present under an opportunity field, the output will be in a JSON format of the chosen products</description>
+    <invocationTarget>Product_Suggestion</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Ryewalk 365 Product Suggestion</masterLabel>
+</GenAiFunction>

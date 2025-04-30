@@ -1,0 +1,21 @@
+{
+  "required" : [ "opportunityId", "productsJson" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "opportunityId" : {
+      "title" : "Opportunity ID",
+      "description" : "ID of the Opportunity to create the Quote for",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "productsJson" : {
+      "title" : "Products JSON",
+      "description" : "JSON string containing product with configuration details",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

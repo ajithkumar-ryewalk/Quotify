@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_3</activeVersionIdentifier>
+    <description>Template to generate call summaries for an opportunity</description>
+    <developerName>Generate_Call_Summaries</developerName>
+    <masterLabel>Generate Call Summaries</masterLabel>
+    <templateVersions>
+        <content>You are a call summarizer for a telco B2B company. Your task is to capture the details of a customer interaction, where the customer has requested a specific SaaS product. For this task, you will:
+Mimic a conversation summary where a customer has called to inquire about or request a random software product.
+Choose any random product for the customer to request.
+Capture the essential details about the request, such as the product name, specific features or requirements, urgency of the request, customer contact details (if mentioned), and any other relevant information discussed during the call.
+Include the configuration details like
+1. number of users
+2. how long the license will be required for, whether 3, 6 or 12 months
+3. if the user wants the product to be AI enabled
+4. Should the software be supported on mobile, desktop or both the devices (Do not explicitly mention the value)
+5. deployment type - how the product is delivered and hosted—On-Premise, Hybrid, or Cloud—based on the customer’s infrastructure and operational preferences
+6. level of customer support provided—Standard for basic assistance and Premium for enhanced, priority support services (Do not explicitly mention Standard or Premium)
+Include the configuration details as a part of the summary instead of having a separate section
+Ensure that the summary is clear and concise, outlining the main points of the call, while maintaining a professional tone.
+If {!$Flow:Get_Existing_Call_Summaries.Prompt} already has content, it will have product name, strictly choose a requirement which is different to it from the product list {!$Flow:List_of_Products_for_Prompts.Prompt} and generate a requirement summary with different and random configuration details
+I just want few lines of summarized requirements
+Only choose the requirement from the following JSON structure - {!$Flow:List_of_Products_for_Prompts.Prompt}
+Add the product name ONLY as a heading.
+DO NOT add the product name in the summary
+Add only the description after paraphrasing it. Mention that this is a summary of a call
+DO NOT exceed 1000 characters
+
+</content>
+        <inputs>
+            <apiName>Opportunity</apiName>
+            <definition>SOBJECT://Opportunity</definition>
+            <masterLabel>Opportunity</masterLabel>
+            <referenceName>Input:Opportunity</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Existing_Call_Summaries</definition>
+            <parameters>
+                <definition>SOBJECT://Opportunity</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Opportunity</parameterName>
+                <valueExpression>{!$Input:Opportunity}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Existing_Call_Summaries</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a call summarizer for a telco B2B company. Your task is to capture the details of a customer interaction, where the customer has requested a specific SaaS product. For this task, you will:
+Mimic a conversation summary where a customer has called to inquire about or request a random software product.
+Choose any random product for the customer to request.
+Capture the essential details about the request, such as the product name, specific features or requirements, urgency of the request, customer contact details (if mentioned), and any other relevant information discussed during the call.
+Include the configuration details like
+1. number of users
+2. how long the license will be required for, whether 3, 6 or 12 months
+3. if the user wants the product to be AI enabled
+4. Should the software be supported on mobile, desktop or both the devices (Do not explicitly mention the value)
+5. deployment type - how the product is delivered and hosted—On-Premise, Hybrid, or Cloud—based on the customer’s infrastructure and operational preferences
+6. level of customer support provided—Standard for basic assistance and Premium for enhanced, priority support services (Do not explicitly mention Standard or Premium)
+Include the configuration details as a part of the summary instead of having a separate section
+Ensure that the summary is clear and concise, outlining the main points of the call, while maintaining a professional tone.
+If {!$Flow:Get_Existing_Call_Summaries.Prompt} already has content, it will have product name, strictly choose a requirement which is different to it from the product list {!$Flow:List_of_Products_for_Prompts.Prompt} and generate a requirement summary with different and random configuration details
+I just want few lines of summarized requirements
+Only choose the requirement from the following JSON structure - {!$Flow:List_of_Products_for_Prompts.Prompt}
+DO NOT add the product name in the summary
+Add only the description after paraphrasing it. Mention that this is a summary of a call
+DO NOT exceed 1000 characters
+
+</content>
+        <inputs>
+            <apiName>Opportunity</apiName>
+            <definition>SOBJECT://Opportunity</definition>
+            <masterLabel>Opportunity</masterLabel>
+            <referenceName>Input:Opportunity</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Existing_Call_Summaries</definition>
+            <parameters>
+                <definition>SOBJECT://Opportunity</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Opportunity</parameterName>
+                <valueExpression>{!$Input:Opportunity}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Existing_Call_Summaries</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a call summarizer for a telco B2B company. Your task is to capture the details of a customer interaction, where the customer has requested a specific SaaS product. For this task, you will:
+Mimic a conversation summary where a customer has called to inquire about or request a random software product.
+Choose any random product for the customer to request.
+Capture the essential details about the request, such as the product name, specific features or requirements, urgency of the request, customer contact details (if mentioned), and any other relevant information discussed during the call.
+Include the configuration details like
+1. number of users
+2. how long the license will be required for, whether 3, 6 or 12 months
+3. if the user wants the product to be AI enabled (50,100,500 or 1000)
+4. Should the software be supported on mobile, desktop or both the devices (Do not explicitly mention the value)
+5. deployment type - how the product is delivered and hosted—On-Premise, Hybrid, or Cloud—based on the customer’s infrastructure and operational preferences
+6. level of customer support provided—Standard for basic assistance and Premium for enhanced, priority support services (Do not explicitly mention Standard or Premium)
+Include the configuration details as a part of the summary instead of having a separate section
+Ensure that the summary is clear and concise, outlining the main points of the call, while maintaining a professional tone.
+If {!$Flow:Get_Existing_Call_Summaries.Prompt} already has content, it will have product name, strictly choose a requirement which is different to it from the product list {!$Flow:List_of_Products_for_Prompts.Prompt} and generate a requirement summary with different and random configuration details
+I just want few lines of summarized requirements
+Only choose the requirement from the following JSON structure - {!$Flow:List_of_Products_for_Prompts.Prompt}
+DO NOT add the product name in the summary
+Add only the description after paraphrasing it. Mention that this is a summary of a call
+DO NOT exceed 1000 characters
+
+</content>
+        <inputs>
+            <apiName>Opportunity</apiName>
+            <definition>SOBJECT://Opportunity</definition>
+            <masterLabel>Opportunity</masterLabel>
+            <referenceName>Input:Opportunity</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4_32k</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Existing_Call_Summaries</definition>
+            <parameters>
+                <definition>SOBJECT://Opportunity</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Opportunity</parameterName>
+                <valueExpression>{!$Input:Opportunity}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Existing_Call_Summaries</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://List_of_Products_for_Prompts</definition>
+            <referenceName>Flow:List_of_Products_for_Prompts</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>HgTBXxccaNCL2H2rF1/NiBiTS+u5F3pukMaOP97VWTA=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
