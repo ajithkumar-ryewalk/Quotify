@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktDataConnection xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectionMethod>Ingress</connectionMethod>
+    <connectionStatus>ACTIVE</connectionStatus>
+    <connectorName>HerokuPostgres</connectorName>
+    <credentials>
+        <fullName>Heroku_Postgres_Competitor_Insights_credentialType</fullName>
+        <credentialName>credentialType</credentialName>
+        <value>*</value>
+    </credentials>
+    <credentials>
+        <fullName>Heroku_Postgres_Competitor_Insights_password</fullName>
+        <credentialName>password</credentialName>
+        <value>*</value>
+    </credentials>
+    <credentials>
+        <fullName>Heroku_Postgres_Competitor_Insights_user</fullName>
+        <credentialName>user</credentialName>
+        <value>*</value>
+    </credentials>
+    <externalRecordIdentifier>4a6a9588-2c39-49c2-9060-a9faf4eb0b94</externalRecordIdentifier>
+    <masterLabel>Heroku Postgres Competitor Insights</masterLabel>
+    <parameters>
+        <fullName>Heroku_Postgres_Competitor_Insights_DATABASE</fullName>
+        <paramName>DATABASE</paramName>
+        <value>dbn0fifa96j7b</value>
+    </parameters>
+    <parameters>
+        <fullName>Heroku_Postgres_Competitor_Insights_jdbc_connection_url</fullName>
+        <paramName>jdbc_connection_url</paramName>
+        <value>cb5ajfjosdpmil.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com</value>
+    </parameters>
+</MktDataConnection>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areHeadersIncludedInFile>false</areHeadersIncludedInFile>
+    <bulkIngest>true</bulkIngest>
+    <creationType>Custom</creationType>
+    <dataConnector>Heroku_Postgres_Competitor_Insights</dataConnector>
+    <dataConnectorType>HerokuPostgres</dataConnectorType>
+    <dataPlatformDataSetItemName>CONNECTORSFRAMEWORK</dataPlatformDataSetItemName>
+    <dataSource>HerokuPostgres_Heroku_Postgres_Competitor_Insights</dataSource>
+    <isLimitedToNewFiles>false</isLimitedToNewFiles>
+    <isMissingFileFailure>false</isMissingFileFailure>
+    <masterLabel>product_comparison Heroku Postgres Compe</masterLabel>
+    <mktDataLakeObject>product_comparison_Heroku_Postgres_Compe__dll</mktDataLakeObject>
+    <mktDataTranObject>product_comparison_Heroku_Postgres_Compe</mktDataTranObject>
+    <parameters>
+        <fullName>product_comparison_Heroku_Postgres_Compe_objectName</fullName>
+        <paramName>objectName</paramName>
+        <value>product_comparison</value>
+    </parameters>
+    <parameters>
+        <fullName>product_comparison_Heroku_Postgres_Compe_SCHEMA</fullName>
+        <paramName>SCHEMA</paramName>
+        <value>product_data</value>
+    </parameters>
+</DataStreamDefinition>
